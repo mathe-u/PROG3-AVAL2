@@ -3,14 +3,35 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
-        <title>Eleições 2022 Piauí</title>
+        <title>Eleições Piauí 2022</title>
     </head>
     <body>
-      <h1 id="res">Por Candidato</h1>
+      <h1>Eleições Piauí 2022</h1>
+      <h2 id="res">Por Candidato</h2>
       
       <form id="candidate-form" action="/candidate-query" method="POST" accept-charset="utf-8">
         <input type="text" list="names" name="name" id="name" value="" autofocus>
         <datalist id="names" name=""></datalist>
+        <button>Buscar</button>
+      </form>
+
+      <h2>Por Cargo</h2>
+
+      <form id="position-form" action="/candidate-position" method="POST" accept-charset="utf-8">
+        <label for="position">Selecione um cargo:</label>
+        
+        <select name="position" id="position"></select>
+
+        <button>Buscar</button>
+      </form>
+
+      <h2>Por Municipio</h2>
+
+      <form id="county-form" action="/county-query" method="POST" accept-charset="utf-8">
+        <label for="county">Selecione um municipio</label>
+
+        <select name="county" id="county"></select>
+
         <button>Buscar</button>
       </form>
 
@@ -22,16 +43,6 @@
           <th>Status</th>
         </tr>
       </table>
-
-      <h1>Por Cargo</h1>
-
-      <form id="position-form" action="/candidate-position" method="POST" accept-charset="utf-8">
-        <label for="position">Selecione um cargo:</label>
-        
-        <select name="position" id="position"></select>
-
-        <button>Buscar</button>
-      </form>
 
     </body>
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>

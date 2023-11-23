@@ -15,6 +15,10 @@ app.get('/electoral-position', endpoints.positions);
 
 app.post('/candidate-position', endpoints.fullPositions);
 
+app.get('/county', endpoints.countyList);
+
+app.post('/county-query', endpoints.fullCounty);
+
 console.log('Server on. Listen on port 3001');
 
 app.listen(3001);
