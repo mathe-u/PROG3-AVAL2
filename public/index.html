@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Eleições 2022 Piauí</title>
+    </head>
+    <body>
+      <h1 id="res">Por Candidato</h1>
+      
+      <form id="candidate-form" action="/candidate-query" method="POST" accept-charset="utf-8">
+        <input type="text" list="names" name="name" id="name" value="" autofocus>
+        <datalist id="names" name=""></datalist>
+        <button>Buscar</button>
+      </form>
+
+      <table id="filter-table">
+        <tr>
+          <th>Candidato</th>
+          <th>Cargo</th>
+          <th>Votos</th>
+          <th>Status</th>
+        </tr>
+      </table>
+
+      <h1>Por Cargo</h1>
+
+      <form id="position-form" action="/candidate-position" method="POST" accept-charset="utf-8">
+        <label for="position">Selecione um cargo:</label>
+        
+        <select name="position" id="position"></select>
+
+        <button>Buscar</button>
+      </form>
+
+    </body>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="./js/browser.js"></script>
+</html>
