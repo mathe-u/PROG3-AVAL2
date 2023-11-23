@@ -39,10 +39,6 @@ const header = `
 </tr>`
 
 axios.get('/electoral-position').then((response) => {
-    /*console.log(response.data);
-    const html = response.data.map((position) => {
-        return template(position);
-    }).join('');*/
     listPosition.innerHTML = html(response.data);
 }).catch((error) => {
     console.log(error.message);
@@ -66,11 +62,10 @@ formPosition.addEventListener('submit', (e) => {
 
 input.addEventListener('input', () => {
     axios.post('/candidate-search', {text: input.value}).then((response) => {
-        const candidates = response.data;
         const dataList = document.getElementById('names');
 
         dataList.innerHTML = '';
-        dataList.insertAdjacentHTML('beforeend', html(candidates));
+        dataList.insertAdjacentHTML('beforeend', html(response.data));
     }).catch((error) => {
         console.log(error.message);
     });
@@ -79,9 +74,8 @@ input.addEventListener('input', () => {
 formCandidate.addEventListener('submit', (e) => {
     e.preventDefault()
     axios.post('candidate-query', {text: input.value}).then((response) => {
-        const candidates = response.data;
         filterTable.innerHTML = '';
-        filterTable.insertAdjacentHTML('beforeend', header + list(candidates));
+        filterTable.insertAdjacentHTML('beforeend', header + list(response.data));
     }).catch((error) => {
         console.log(error.message);
     });
@@ -90,9 +84,8 @@ formCandidate.addEventListener('submit', (e) => {
 formCounty.addEventListener('submit', (e) => {
     e.preventDefault();
     axios.post('/county-query', {county: listCounty.value}).then((response) => {
-        const candidates = response.data;
         filterTable.innerHTML = '';
-        filterTable.insertAdjacentHTML('beforeend', header + list(candidates));
+        filterTable.insertAdjacentHTML('beforeend', header + list(response.data));
     }).catch((error) => {
         console.log(error.message);
     });
