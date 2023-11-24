@@ -19,6 +19,8 @@ app.get('/county', endpoints.countyList);
 
 app.post('/county-query', endpoints.fullCounty);
 
+app.get('/general-elected', endpoints.generalElected);
+
 console.log('Server on. Listen on port 3001');
 
 app.listen(3001);

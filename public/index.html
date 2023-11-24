@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="./css/styles.css">
         <title>Eleições Piauí 2022</title>
     </head>
     <body>
@@ -28,7 +29,7 @@
       <h2>Por Municipio</h2>
 
       <form id="county-form" action="/county-query" method="POST" accept-charset="utf-8">
-        <label for="county">Selecione um municipio</label>
+        <label for="county">Selecione um municipio:</label>
 
         <select name="county" id="county"></select>
 
@@ -43,6 +44,29 @@
           <th>Status</th>
         </tr>
       </table>
+
+      <h2>Resultado Geral</h2>
+
+      <h4>Eleito</h4>
+      <label class="switch">
+        <input type="checkbox" id="input-checkbox">
+        <span class="slider round"></span>
+      </label>
+
+      <h3>Presidente</h3>
+      <table id="pre"></table>
+
+      <h3>Governador</h3>
+      <table id="gov"></table>
+
+      <h3>Senador</h3>
+      <table id="sen"></table>
+
+      <h3>Deputado Federal</h3>
+      <table id="fed"></table>
+
+      <h3>Deputado Estadual</h3>
+      <table id="est"></table>
 
     </body>
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>

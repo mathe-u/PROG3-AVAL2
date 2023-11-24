@@ -7,17 +7,6 @@ const candidate = function(req, res) {
     FROM candidato 
     WHERE nome LIKE '${name}%' 
     ORDER BY nome`;
-    /*console.log('---- Tables ----');
-    sqlite.db.all(query, (error, rows) => {
-        if (error) {
-            throw error.message;
-        }
-        rows.forEach((row) => {
-            console.log(row.name);
-        });
-    });*/
-
-    // banco de dados
 
     sqlite.db.all(query, (error, rows) => {
         if (error) {
@@ -33,7 +22,10 @@ const fullCandidate = function(req, res) {
     const query = `
     SELECT y.nome, z.nome as cargo, SUM(x.votos) as votos, y.status
     FROM candidato y, votacao x, cargo z
-    WHERE y.id = x.candidato AND y.cargo = x.cargo AND x.cargo = z.id AND y.nome LIKE '${name}%'
+    WHERE y.id = x.candidato 
+    AND y.cargo = x.cargo 
+    AND x.cargo = z.id 
+    AND y.nome LIKE '${name}%'
     GROUP BY x.candidato`;
 
     sqlite.db.all(query, (error, rows) => {
@@ -65,7 +57,8 @@ const fullPositions = function(req, res) {
     AND y.nome LIKE '${position}' 
     AND z.id = x.candidato 
     AND z.cargo = x.cargo
-    GROUP BY x.candidato`;
+    GROUP BY x.candidato
+    ORDER BY votos DESC`;
 
     sqlite.db.all(query, (error, rows) => {
         if (error) {
@@ -96,7 +89,8 @@ const fullCounty = function(req, res) {
     AND w.id = x.cargo
     AND z.cargo = x.cargo 
     AND y.nome LIKE '${county}'
-    GROUP BY z.nome`;
+    GROUP BY z.nome
+    ORDER BY votos DESC`;
     
     sqlite.db.all(query, (error, rows) => {
         if (error) {
@@ -106,4 +100,29 @@ const fullCounty = function(req, res) {
     });
 };
 
-module.exports = {candidate, fullCandidate, positions, fullPositions, countyList, fullCounty};
+const generalElected = function(req, res) {
+    const query = `
+    SELECT y.nome, y.cargo, SUM(x.votos) as votos, y.status
+    FROM votacao x, candidato y
+    WHERE x.candidato = y.id 
+    AND x.cargo = y.cargo
+    GROUP BY y.nome
+    ORDER BY votos DESC`;
+
+    sqlite.db.all(query, (error, rows) => {
+        if (error) {
+            throw error.message;
+        }
+        res.send(JSON.stringify(rows));
+    });
+};
+
+module.exports = {
+    candidate, 
+    fullCandidate, 
+    positions, 
+    fullPositions, 
+    countyList, 
+    fullCounty, 
+    generalElected
+};
