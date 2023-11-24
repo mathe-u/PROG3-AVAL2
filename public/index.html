@@ -7,70 +7,68 @@
         <title>Eleições Piauí 2022</title>
     </head>
     <body>
-      <h1>Eleições Piauí 2022</h1>
-      <h2 id="res">Por Candidato</h2>
-      
-      <form id="candidate-form" action="/candidate-query" method="POST" accept-charset="utf-8">
-        <input type="text" list="names" name="name" id="name" value="" autofocus>
-        <datalist id="names" name=""></datalist>
-        <button>Buscar</button>
-      </form>
+      <header>
+        <h1 class = 'titulo'> Eleições  2022 <b> Piauí</b></h1>
+      </header>
 
-      <h2>Por Cargo</h2>
-
-      <form id="position-form" action="/candidate-position" method="POST" accept-charset="utf-8">
-        <label for="position">Selecione um cargo:</label>
-        
-        <select name="position" id="position"></select>
-
-        <button>Buscar</button>
-      </form>
-
-      <h2>Por Municipio</h2>
-
-      <form id="county-form" action="/county-query" method="POST" accept-charset="utf-8">
-        <label for="county">Selecione um municipio:</label>
-
-        <select name="county" id="county"></select>
-
-        <button>Buscar</button>
-      </form>
-
-      <table id="filter-table">
-        <tr>
-          <th>Candidato</th>
-          <th>Cargo</th>
-          <th>Votos</th>
-          <th>Status</th>
-        </tr>
-      </table>
-
-      <h2>Resultado Geral</h2>
       <a href="/general.html" target="_blank">
         <button type="button">Resultado Geral</button>
       </a>
 
+      <div class="container">
+        <div class="esquerda">
 
-      <h4>Eleito</h4>
-      <label class="switch">
-        <input type="checkbox" id="input-checkbox">
-        <span class="slider round"></span>
-      </label>
+          <div class ='div1'>
+            <h1 id="res">Candidato</h1>
+            <form id="candidate-form" action="/candidate-query" method="POST" accept-charset="utf-8">
+              <input type="text" list="names" name="name" id="name" value="" autofocus placeholder="Digite sua busca...">
+              <datalist id="names" name=""></datalist>
+              <button>Buscar</button>
+            </form>
+          </div>
 
-      <h3>Presidente</h3>
-      <table id="pre"></table>
+          <div class = 'div2'>
+            <h1>Cargo</h1>
+            <form id="position-form" action="/candidate-position" method="POST" accept-charset="utf-8">
+              <label for="position">Selecione um cargo:</label>
+          
+              <select name="position" id="position"></select>
+  
+              <button>Buscar</button>
+            </form>
+          </div>
 
-      <h3>Governador</h3>
-      <table id="gov"></table>
+          <div class = 'div3'>
 
-      <h3>Senador</h3>
-      <table id="sen"></table>
+            <h1>Por Municipio</h1>
+            <form id="county-form" action="/county-query" method="POST" accept-charset="utf-8">
+              <label for="county">Selecione um municipio:</label>
 
-      <h3>Deputado Federal</h3>
-      <table id="fed"></table>
+              <select name="county" id="county"></select>
+              <button>Buscar</button>
+            </form>
+          </div>
 
-      <h3>Deputado Estadual</h3>
-      <table id="est"></table>
+        </div>
+
+        <div class="direita">
+          <div>
+            <table id="filter-table">
+              <tr>
+                <th>Candidato</th>
+                <th>Cargo</th>
+                <th>Votos</th>
+                <th>Status</th>
+              </tr>
+            </table>
+          </div>  
+        </div>
+
+      </div>
+
+      <footer>
+        <p>João Pedro ,Matheus ,Mairon</p>
+      </footer>
 
     </body>
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
