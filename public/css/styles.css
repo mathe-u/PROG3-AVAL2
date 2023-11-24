@@ -1,3 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Varela+Round&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Coming+Soon&family=Encode+Sans:wght@100&family=Inter:wght@200&family=Josefin+Sans:ital@1&family=Julius+Sans+One&family=Montserrat:ital,wght@1,200&family=PT+Sans&family=Source+Code+Pro:wght@200;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    margin: 0;
+}
+
+body{
+   
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; 
+    height: 100vh; 
+}
+
+.esquerda{
+    margin :10px;
+    display: flex;
+    flex-direction: column;
+    
+  
+}  
+.esquerda div{
+    background-color: rgba(103, 128, 128, 0.104);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;   
+      
+}
+.direita{
+    background-color: rgba(103, 128, 128, 0.104);
+    margin: 10px;
+    
+    border-radius: 10px;
+    height: 510px;
+    
+     
+}
+.direita div{
+  max-height: 400px; 
+  overflow: auto; 
+  border: 0px solid #ccc; 
+  padding: 10px;
+  
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+
+.esquerda, .direita {
+    margin: 10px;
+    border: 0px solid #ccc;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+
+
+
+.container2{
+    
+    background-color:  rgba(103, 128, 128, 0.104);
+    display:flex;
+    margin-top: 10px;
+    padding: 30px;
+}
+.container2 div{
+    margin: 20px;
+    
+}
+
+.dep_f{
+   
+    max-height: 100px; 
+    overflow: auto; 
+    border: 0px solid #ccc; 
+    padding: 0px; 
+
+}
+.dep_e{
+    
+    max-height: 100px; 
+    overflow: auto; 
+    border: 0px solid #ccc; 
+    padding: 0px; 
+
+}
+
+header {
+    width: 100%;
+    font-family: 'PT Sans', sans-serif;;
+    
+    margin: 0;
+    padding: 30px;
+    background-color: rgb(21, 48, 86);
+    box-shadow: 0px 3px 10px #464646;
+}   
+
+.titulo{
+    color: white;
+}
+
+b{
+    color: rgb(207, 114, 0);
+}
+
+h1{
+    color: rgb(51, 51, 51);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+button{
+    color: white;
+    background-color: rgb(23, 65, 113);
+    border:1px solid;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+      
+}
+
+select{
+    width: 150px;
+    border-radius: 30px;
+}
+input{
+    width: 300px;
+    border: 1px solid;
+    border-radius: 30px;
+}
+
+
+th,tr{
+    justify-content: space-between;
+    align-items: center;   
+}
+
+tr{
+    margin: 2px;
+    background-color: #46464632;
+    color: rgb(21, 21, 26);
+    
+    padding-right: 1px;  
+    text-align:center;  
+}
+
+th{
+  
+  width: 200px;
+  border-radius: 0;
+  background-color:rgba(21, 48, 86, 0.274);
+    
+}
+
+
+table{
+    justify-content: space-between;
+    color: rgb(124, 124, 124);
+}
+
+form{
+    height: 100px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 30px;
+  
+}
+
+footer{
+    color: white;
+    background-color:rgb(21, 48, 86);
+    text-align:center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+    
+
+
+
+@media screen and (max-width: 730px) {
+  header{
+    width: 100%;
+  }
+  .container{
+    height: ;
+  }
+  .container2{
+    padding: 10px;
+    display: inline;
+
+  };
+}
+
+
 /* The switch - the box around the slider */
 .switch {
   position: relative;
@@ -39,7 +239,7 @@
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: rgb(21, 48, 86);
 }
 
 input:focus + .slider {

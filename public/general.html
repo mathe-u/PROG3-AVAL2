@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eleições Piauí 2022</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header>
+        <h1 class = 'titulo'> Eleições  2022 <b> Piauí</b></h1>
+    </header>
+
+    <div class = container2>
+        
+        <h2>Resultado Geral</h2>
+
+        <h4>Eleito</h4>
+        <label class="switch">
+        <input type="checkbox" id="input-checkbox">
+        <span class="slider round"></span>
+        </label>
+
+        <div>
+          <h3>Presidente</h3>
+          <table id="pre"></table>  
+        </div>
+        
+        <div>
+          <h3>Governador</h3>
+          <table id="gov"></table>
+        </div>
+        
+        <div>
+          <h3>Senador</h3>
+          <table id="sen"></table>
+        </div>
+        
+        <div>
+          <h3>Deputado Federal</h3>
+          <div class = 'dep_f'>
+            <table id="fed"></table>
+          </div>
+        </div>
+
+        <div>
+          <h3>Deputado Estadual</h3>
+          <div class = 'dep_e'>
+            <table id="est"></table>
+          </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>João Pedro ,Matheus ,Mairon</p>
+    </footer>
+    
+</body>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="./js/general-results.js"></script>
+</html>

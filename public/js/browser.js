@@ -87,7 +87,7 @@ function select(item, st) {
 
 const listPositions = ['pre', 'gov', 'sen', 'fed', 'est'];
 
-axios.get('/general-elected').then((response) => {
+/*axios.get('/general-elected').then((response) => {
     let checked = 1;
     const checkbox = document.getElementById('input-checkbox');
     checkbox.checked = true;
@@ -117,7 +117,7 @@ axios.get('/general-elected').then((response) => {
     });
 }).catch((error) => {
     console.log(error.message);
-});
+});*/
 
 formPosition.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -158,4 +158,8 @@ formCounty.addEventListener('submit', (e) => {
     }).catch((error) => {
         console.log(error.message);
     });
+});
+
+document.getElementById('general').addEventListener('click', () => {
+    return;
 });
