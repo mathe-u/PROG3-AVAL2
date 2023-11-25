@@ -3,12 +3,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Coming+Soon&family=Encode+Sans:wght@100&family=Inter:wght@200&family=Josefin+Sans:ital@1&family=Julius+Sans+One&family=Montserrat:ital,wght@1,200&family=PT+Sans&family=Source+Code+Pro:wght@200;400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-*{
+* {
     margin: 0;
 }
 
-body{
-   
+body {
     font-family: 'Roboto', sans-serif;
 }
 
@@ -22,26 +21,23 @@ body{
     margin :10px;
     display: flex;
     flex-direction: column;
-    
-  
 }  
-.esquerda div{
+
+.esquerda div {
     background-color: rgba(103, 128, 128, 0.104);
     margin: 10px;
     padding: 10px;
-    border-radius: 10px;   
-      
+    border-radius: 10px;
 }
-.direita{
+
+.direita {
     background-color: rgba(103, 128, 128, 0.104);
     margin: 10px;
-    
     border-radius: 10px;
     height: 510px;
-    
-     
 }
-.direita div{
+
+.direita div {
   max-height: 400px; 
   overflow: auto; 
   border: 0px solid #ccc; 
@@ -51,7 +47,6 @@ body{
     padding-right: 50px;
 }
 
-
 .esquerda, .direita {
     margin: 10px;
     border: 0px solid #ccc;
@@ -59,119 +54,103 @@ body{
     box-sizing: border-box;
 }
 
-
-
-
-
-.container2{
-    
+.container2 {    
     background-color:  rgba(103, 128, 128, 0.104);
     display:flex;
     margin-top: 10px;
     padding: 30px;
 }
-.container2 div{
+
+.container2 div {
     margin: 20px;
-    
 }
 
-.dep_f{
-   
+.dep_f {
     max-height: 100px; 
     overflow: auto; 
     border: 0px solid #ccc; 
-    padding: 0px; 
-
+    padding: 0px;
 }
-.dep_e{
-    
+
+.dep_e {    
     max-height: 100px; 
     overflow: auto; 
     border: 0px solid #ccc; 
-    padding: 0px; 
-
+    padding: 0px;
 }
 
 header {
     width: 100%;
-    font-family: 'PT Sans', sans-serif;;
-    
+    font-family: 'PT Sans', sans-serif;
     margin: 0;
     padding: 30px;
     background-color: rgb(21, 48, 86);
     box-shadow: 0px 3px 10px #464646;
-}   
+}
 
-.titulo{
+.titulo {
     color: white;
 }
 
-b{
+b {
     color: rgb(207, 114, 0);
 }
 
-h1{
+h1 {
     color: rgb(51, 51, 51);
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
-button{
+button {
     color: white;
     background-color: rgb(23, 65, 113);
     border:1px solid;
     border-radius: 5px;
     font-family: Arial, Helvetica, sans-serif;
-      
 }
 
-select{
+select {
     width: 150px;
     border-radius: 30px;
 }
-input{
+
+input {
     width: 300px;
     border: 1px solid;
     border-radius: 30px;
 }
 
-
-th,tr{
+th,tr {
     justify-content: space-between;
     align-items: center;   
 }
 
-tr{
+tr {
     margin: 2px;
     background-color: #46464632;
-    color: rgb(21, 21, 26);
-    
-    padding-right: 1px;  
-    text-align:center;  
+    color: rgb(21, 21, 26); 
+    padding-right: 1px;
+    text-align:center;
 }
 
-th{
-  
+th {
   width: 200px;
   border-radius: 0;
   background-color:rgba(21, 48, 86, 0.274);
-    
 }
 
-
-table{
+table {
     justify-content: space-between;
     color: rgb(124, 124, 124);
 }
 
-form{
+form {
     height: 100px;
     font-family: 'Roboto', sans-serif;
     border-radius: 30px;
-  
 }
 
-footer{
+footer {
     color: white;
     background-color:rgb(21, 48, 86);
     text-align:center;
@@ -179,26 +158,22 @@ footer{
     bottom: 0;
     width: 100%;
 }
-    
-
-
 
 @media screen and (max-width: 730px) {
-  header{
+  header {
     width: 100%;
   }
+
   .container{
     height: ;
   }
+
   .container2{
     padding: 10px;
     display: inline;
-
   };
 }
 
-
-/* The switch - the box around the slider */
 .switch {
   position: relative;
   display: block;
@@ -206,14 +181,12 @@ footer{
   height: 34px;
 }
 
-/* Hide default HTML checkbox */
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-/* The slider */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -252,7 +225,6 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-/* Rounded sliders */
 .slider.round {
   border-radius: 34px;
 }
